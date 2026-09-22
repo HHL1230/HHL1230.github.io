@@ -13,7 +13,7 @@ const SITE = {
   links: {
     github: "https://github.com/HHL1230",
     products: "https://hhl1230.github.io/my-products/",
-    email: "mailto:REPLACE_WITH_PERSONAL_EMAIL"
+    email: "mailto:haohsianglee@gmail.com"
   }
 };
 

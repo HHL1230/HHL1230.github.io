@@ -1,14 +1,15 @@
 # HHL1230.github.io — Portfolio Portal
 
-Bilingual (EN / 繁體中文) portfolio index for CV use.
-Live URL once Pages is enabled: **https://hhl1230.github.io/**
+Bilingual (繁體中文 default / EN) portfolio index for CV use.
+Live at **https://hhl1230.github.io/**
 
 ## Structure
 
 ```
 index.html          page shell (i18n placeholders only, no content)
 assets/styles.css   styling
-assets/app.js       rendering + language toggle
+assets/app.js       rendering + language switch + lightbox
+assets/shots/       screenshots referenced by `shots`
 data/projects.js    ← the only file you normally edit
 ```
 
@@ -27,20 +28,27 @@ Every text field is `{ en: "...", zh: "..." }`.
 | `status` | Meaning | Link shown |
 |---|---|---|
 | `"public"` | Source is public and safe to show | Yes, via `repo` |
-| `"sanitizing"` | Built at work; internal data not yet removed | No — badge shown instead |
+| `"confidential"` | Built for an employer; source stays private | No — badge plus a confidentiality note |
 
-When a repo has been sanitized and made public, change `status` to `"public"` and set `repo`.
+A `"confidential"` project must never have a `repo` value. If a project later
+becomes public, set `status` to `"public"` and add `repo`.
 
-## Before you publish
+### Optional fields
 
-1. Replace `REPLACE_WITH_PERSONAL_EMAIL` in `data/projects.js` with a personal (non-employer) address.
-2. Read `SANITIZATION.md` and confirm nothing confidential appears in any description.
-3. Enable Pages: repo **Settings → Pages → Source: Deploy from branch → `main` / root**.
+- `featured: true` — also pins the card to the top section.
+- `metrics` — array of `{ value, label: { en, zh } }`, rendered as a small
+  stat bar. Leave as `null` until you have a defensible figure; see
+  `METRICS.md`.
+- `shots` — array of `{ src, caption: { en, zh } }`. `src` is relative to the
+  repo root, e.g. `assets/shots/sky-strike-title.png`. Thumbnails open in a
+  lightbox. See `assets/shots/README.md` for image rules.
 
 ## Local preview
 
+`python` is not always on PATH, so a small Node server is the safer option:
+
 ```powershell
-python -m http.server 8080
+node -e "const http=require('http'),fs=require('fs'),path=require('path');const t={'.html':'text/html','.css':'text/css','.js':'text/javascript','.png':'image/png'};http.createServer((q,s)=>{let p=decodeURIComponent(q.url.split('?')[0]);if(p==='/')p='/index.html';fs.readFile(path.join(process.cwd(),p),(e,d)=>{if(e){s.writeHead(404);s.end()}else{s.writeHead(200,{'Content-Type':(t[path.extname(p)]||'application/octet-stream')+'; charset=utf-8'});s.end(d)}})}).listen(8080)"
 # then open http://localhost:8080
 ```
 
