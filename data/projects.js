@@ -541,26 +541,35 @@ const PROJECTS = [
     cat: "games",
     title: { en: "Moto Duel", zh: "MOTO DUEL 越野機車對決" },
     tagline: {
-      en: "2D off-road motorcycle racing game with AI opponents, split-screen local multiplayer and procedurally generated audio.",
-      zh: "2D 越野機車競速遊戲，支援 AI 對手、雙人同機分割畫面與程序化合成音樂音效。"
+      en: "2D off-road motorcycle racing game with AI opponents and split-screen local multiplayer, where every frame of art and every sound is generated in code.",
+      zh: "2D 越野機車競速遊戲，支援 AI 對手與雙人同機分割畫面；所有畫面與音效皆由程式即時產生，不使用任何外部素材檔。"
     },
     highlights: {
       en: [
-        "Off-road physics: rolling terrain, jumps, mid-air rotation and landing-angle evaluation",
+        "Off-road physics: rolling terrain, jumps, mid-air rotation and landing-angle evaluation, with auto-correction toward the landing slope when the rider lets go",
         "Three AI difficulty tiers, three-round match format and catch-up assistance",
+        "Six-layer parallax scenery, three-strata terrain cross-sections and articulated rider poses \u2014 all drawn procedurally, no image files",
+        "Procedurally synthesised music, 12 sound effects and an engine note that shifts with speed",
         "15-achievement progression system persisted across sessions",
-        "Procedurally synthesised background music and sound effects"
+        "Headless smoke tests run under the SDL dummy driver, verifying track traversability and full-throttle completion without opening a window"
       ],
       zh: [
-        "越野物理：連續起伏地形、跳台、空中翻滾與落地角度判定",
+        "越野物理：連續起伏地形、跳台、空中翻滾與落地角度判定；放開傾斜鍵後車身自動朝落點地形角度校正",
         "三種 AI 難度、三回合制對決與落後方追趕補給",
+        "六層視差背景、三層地質地形剖面與關節化騎士姿勢，全部以程式繪製，不含任何圖檔",
+        "程序化合成的背景音樂、12 種音效與隨車速變檔的引擎聲",
         "15 項成就系統，跨場次保存進度",
-        "程序化合成的背景音樂與音效"
+        "以 SDL dummy driver 執行的無視窗煙霧測試，免開視窗即可驗證地形可通行性與全油門完賽"
       ]
     },
-    stack: ["Python", "pygame-ce"],
-    status: "confidential",
-    repo: null
+    stack: ["Python", "pygame-ce", "uv"],
+    status: "public",
+    repo: "https://github.com/HHL1230/moto-duel",
+    metrics: {
+      en: "4.5 ms per frame single-view, 6.6 ms split-screen \u2014 against a 16.6 ms budget at 60 FPS",
+      zh: "單人視角每幀 4.5 ms、雙人分割 6.6 ms，對比 60 FPS 的 16.6 ms 預算"
+    },
+    shots: []
   },
   {
     id: "sky-strike-1942",
