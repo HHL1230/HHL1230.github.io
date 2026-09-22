@@ -561,5 +561,41 @@ const PROJECTS = [
     stack: ["Python", "pygame-ce"],
     status: "confidential",
     repo: null
+  },
+  {
+    id: "sky-strike-1942",
+    cat: "games",
+    featured: true,
+    title: { en: "Sky Strike 1942", zh: "Sky Strike 1942 垂直捲軸射擊" },
+    tagline: {
+      en: "Vertical-scrolling shoot 'em up across 7 stages, where every sprite, background and sound is generated in code \u2014 no external asset files at all.",
+      zh: "7 關卡的垂直捲軸射擊遊戲，所有圖形、背景與音效皆由程式即時產生，不含任何外部素材檔。"
+    },
+    highlights: {
+      en: [
+        "All art drawn procedurally at 4x resolution then downsampled, giving smooth edges, cylindrical fuselage gradients and a unified light source",
+        "Chiptune music and sound effects synthesised at runtime; single dependency (pygame-ce)",
+        "7 stages with distinct bosses, attackable naval fleets, dual weapon system and evasive roll mechanic",
+        "Headless smoke tests play through all 7 stages; benchmark tool measures ~0.8 ms CPU per frame with 200+ sprites",
+        "Solves a subtle Windows input bug: IME text-input capture silently swallows all key events until pygame.key.stop_text_input() is called"
+      ],
+      zh: [
+        "所有美術以 4 倍解析度超取樣繪製後縮小，呈現平滑邊緣、圓柱狀機身漸層與統一光源投影",
+        "Chiptune 音樂與音效皆於執行時合成；全遊戲僅依賴 pygame-ce 一個套件",
+        "7 關各有專屬頭目、可攻擊的敵軍艦隊、雙武器系統與翻滾迴避機制",
+        "無視窗煙霧測試可自動跑完 7 關；效能量測顯示 200+ 精靈下每幀 CPU 約 0.8 ms",
+        "解決 Windows 輸入法會攔截按鍵、導致 pygame 完全收不到 KEYDOWN 的隱蔽問題"
+      ]
+    },
+    stack: ["Python", "pygame-ce", "Win32 API"],
+    status: "public",
+    repo: "https://github.com/HHL1230/sky-strike-1942",
+    metrics: null,
+    shots: [
+      { src: "sky-strike-title.png", caption: { en: "Title screen", zh: "標題畫面" } },
+      { src: "sky-strike-stage6.png", caption: { en: "Stage 6 \u2014 volcanic rim", zh: "STAGE 6 火山列島" } },
+      { src: "sky-strike-boss7.png", caption: { en: "Final boss \u2014 SHIRANUI", zh: "最終頭目 SHIRANUI 超弩級戰艦" } },
+      { src: "sky-strike-warships.png", caption: { en: "Attackable enemy warships", zh: "可攻擊的敵軍軍艦" } }
+    ]
   }
 ];
