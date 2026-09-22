@@ -104,7 +104,7 @@
       links.appendChild(a);
     }
     if (p.demo) {
-      var d = el("a", null, t("viewDemo"));
+      var d = el("a", null, p.demoLabel ? L(p.demoLabel) : t("viewDemo"));
       d.href = p.demo; d.target = "_blank"; d.rel = "noopener";
       links.appendChild(d);
     }

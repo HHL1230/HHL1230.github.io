@@ -511,6 +511,8 @@ const PROJECTS = [
     stack: ["HTML5 Canvas", "CSS3", "JavaScript"],
     status: "public",
     repo: "https://github.com/HHL1230/cute-snake-game",
+    demo: "https://hhl1230.github.io/cute-snake-game/",
+    demoLabel: { en: "Play online", zh: "線上遊玩" },
     metrics: null,
     shots: [
       { src: "snake-menu.png", caption: { en: "Start screen with speed selection", zh: "開始畫面與速度選擇" } },

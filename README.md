@@ -39,6 +39,9 @@ becomes public, set `status` to `"public"` and add `repo`.
 - `metrics` — a short `{ en, zh }` impact line rendered above the tagline,
   e.g. `"Cuts a 40-minute manual step to under 1 minute"`. Leave as `null`
   until you have a defensible figure; see `METRICS.md`.
+- `demo` — URL of a live page, shown as a second link. `demoLabel`
+  (`{ en, zh }`) overrides the default "Product page" wording, e.g. for a
+  game that can be played in the browser.
 - `shots` — array of `{ src, caption: { en, zh } }`. `src` is **just the
   filename**; `assets/shots/` is prepended automatically. Thumbnails open in
   a lightbox. See `assets/shots/README.md` for image rules.
