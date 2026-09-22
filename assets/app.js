@@ -38,7 +38,9 @@
     }
   };
 
-  var lang = (localStorage.getItem("portfolioLang") === "zh") ? "zh" : "en";
+  /* Default to Traditional Chinese; remember the visitor's explicit choice. */
+  var saved = localStorage.getItem("portfolioLang");
+  var lang = (saved === "en" || saved === "zh") ? saved : "zh";
   var activeCat = "all";
 
   function t(key) { return UI[lang][key]; }
@@ -205,7 +207,9 @@
       });
     });
 
-    document.getElementById("langToggle").textContent = t("toggle");
+    document.querySelectorAll(".lang-opt").forEach(function (b) {
+      b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
+    });
     document.getElementById("lbClose").setAttribute("aria-label", t("closeLabel"));
     document.getElementById("linkGithub").href = SITE.links.github;
     document.getElementById("linkProducts").href = SITE.links.products;
@@ -221,10 +225,13 @@
     renderCatalogue();
   }
 
-  document.getElementById("langToggle").addEventListener("click", function () {
-    lang = (lang === "en") ? "zh" : "en";
-    localStorage.setItem("portfolioLang", lang);
-    renderAll();
+  document.querySelectorAll(".lang-opt").forEach(function (b) {
+    b.addEventListener("click", function () {
+      if (lang === b.dataset.lang) return;
+      lang = b.dataset.lang;
+      localStorage.setItem("portfolioLang", lang);
+      renderAll();
+    });
   });
 
   document.getElementById("lbClose").addEventListener("click", closeLightbox);
