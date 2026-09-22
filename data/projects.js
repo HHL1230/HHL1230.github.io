@@ -489,37 +489,6 @@ const PROJECTS = [
     demo: "https://hhl1230.github.io/my-products/"
   },
   {
-    id: "cute-snake-game",
-    cat: "games",
-    title: { en: "Cute Snake Game", zh: "可愛貪食蛇" },
-    tagline: {
-      en: "A browser snake game with randomised pastel themes, animal avatars and three difficulty speeds.",
-      zh: "瀏覽器貪食蛇遊戲，具隨機粉彩主題、動物頭像與三段速度難度。"
-    },
-    highlights: {
-      en: [
-        "HTML5 Canvas rendering on a 40\u00D740 grid",
-        "Four randomised colour themes and nine animal avatars",
-        "No dependencies \u2014 vanilla JavaScript"
-      ],
-      zh: [
-        "以 HTML5 Canvas 繪製 40\u00D740 格盤面",
-        "四種隨機配色主題與九種動物頭像",
-        "零相依套件，純原生 JavaScript"
-      ]
-    },
-    stack: ["HTML5 Canvas", "CSS3", "JavaScript"],
-    status: "public",
-    repo: "https://github.com/HHL1230/cute-snake-game",
-    demo: "https://hhl1230.github.io/cute-snake-game/",
-    demoLabel: { en: "Play online", zh: "線上遊玩" },
-    metrics: null,
-    shots: [
-      { src: "snake-menu.png", caption: { en: "Start screen with speed selection", zh: "開始畫面與速度選擇" } },
-      { src: "snake-play.png", caption: { en: "Mid-game \u2014 randomised theme and animal avatar", zh: "遊戲進行中，隨機主題與動物頭像" } }
-    ]
-  },
-  {
     id: "game-star-sprout-advanture",
     cat: "games",
     title: { en: "Star Sprout Adventure", zh: "星芽花園大冒險" },
