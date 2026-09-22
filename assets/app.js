@@ -4,8 +4,6 @@
   var UI = {
     en: {
       brandName: "Portfolio",
-      featuredHeading: "Selected Work",
-      allHeading: "All Projects",
       downloadsLabel: "Downloads",
       contactLabel: "Contact",
       viewRepo: "View source",
@@ -21,8 +19,6 @@
     },
     zh: {
       brandName: "\u4F5C\u54C1\u96C6",
-      featuredHeading: "\u4EE3\u8868\u4F5C\u54C1",
-      allHeading: "\u5168\u90E8\u5C08\u6848",
       downloadsLabel: "\u4E0B\u8F09\u5C08\u5340",
       contactLabel: "\u806F\u7D61\u65B9\u5F0F",
       viewRepo: "\u67E5\u770B\u539F\u59CB\u78BC",
@@ -137,13 +133,6 @@
     document.body.style.overflow = "";
   }
 
-  function renderFeatured() {
-    var host = document.getElementById("featured");
-    host.innerHTML = "";
-    PROJECTS.filter(function (p) { return p.featured; })
-      .forEach(function (p) { host.appendChild(buildCard(p)); });
-  }
-
   function renderCatalogue() {
     var host = document.getElementById("catalogue");
     host.innerHTML = "";
@@ -194,8 +183,6 @@
       name: L(SITE.name),
       role: L(SITE.role),
       intro: L(SITE.intro),
-      featuredHeading: t("featuredHeading"),
-      allHeading: t("allHeading"),
       downloadsLabel: t("downloadsLabel"),
       contactLabel: t("contactLabel"),
       privacyNote: t("privacyNote")
@@ -220,7 +207,6 @@
 
   function renderAll() {
     renderStatic();
-    renderFeatured();
     renderFilters();
     renderCatalogue();
   }

@@ -35,7 +35,6 @@ becomes public, set `status` to `"public"` and add `repo`.
 
 ### Optional fields
 
-- `featured: true` — also pins the card to the top section.
 - `metrics` — a short `{ en, zh }` impact line rendered above the tagline,
   e.g. `"Cuts a 40-minute manual step to under 1 minute"`. Leave as `null`
   until you have a defensible figure; see `METRICS.md`.

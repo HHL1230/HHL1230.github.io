@@ -46,7 +46,6 @@ const PROJECTS = [
   {
     id: "qc-extractor",
     cat: "lab",
-    featured: true,
     title: { en: "QC Extractor", zh: "QC Extractor 儀器報告擷取" },
     tagline: {
       en: "Parses PDF reports from multi-brand analytical instruments into structured data and writes them straight into Excel daily logs.",
@@ -74,7 +73,6 @@ const PROJECTS = [
   {
     id: "aida",
     cat: "integrity",
-    featured: true,
     title: { en: "AIDA \u2014 Automated Integrity & Data Auditor", zh: "AIDA 數據完整性稽核系統" },
     tagline: {
       en: "Monitors analyst-generated report files for additions and modifications, and validates instrument timestamps to detect implausible post-processing.",
@@ -102,7 +100,6 @@ const PROJECTS = [
   {
     id: "edge-extension-lims",
     cat: "lab",
-    featured: true,
     title: { en: "LIMS Auto-Login Edge Extension", zh: "LIMS 自動登入 Edge 擴充功能" },
     tagline: {
       en: "One-click browser extension that automates repetitive daily LIMS navigation and lookup routines.",
@@ -130,7 +127,6 @@ const PROJECTS = [
   {
     id: "scale-monitor",
     cat: "lab",
-    featured: true,
     title: { en: "Scale Monitor", zh: "天平數據傳輸程式" },
     tagline: {
       en: "RS232 bridge that writes balance readings from Mettler Toledo and OHAUS instruments directly into Excel cells.",
@@ -384,7 +380,6 @@ const PROJECTS = [
   {
     id: "contract-review",
     cat: "ai",
-    featured: true,
     title: { en: "AI Contract Review", zh: "AI 智能合約審核系統" },
     tagline: {
       en: "Edge-deployed LLM tool that flags contract risk and returns concrete, copy-ready revision suggestions.",
@@ -411,7 +406,6 @@ const PROJECTS = [
   {
     id: "cli-dev-sync-tool",
     cat: "ai",
-    featured: true,
     title: { en: "CLI Dev Sync Tool", zh: "CLI 開發環境同步工具" },
     tagline: {
       en: "Keeps AI CLI conversation history and global settings in sync across two workstations via git.",
@@ -438,7 +432,6 @@ const PROJECTS = [
   {
     id: "rehabilitation-training-android",
     cat: "apps",
-    featured: true,
     title: { en: "Leg Rehabilitation Training", zh: "腿部復健訓練 App" },
     tagline: {
       en: "Android app helping post-arthroplasty seniors log daily rehabilitation exercises, set reminders and share progress with carers.",
@@ -559,7 +552,6 @@ const PROJECTS = [
   {
     id: "sky-strike-1942",
     cat: "games",
-    featured: true,
     title: { en: "Sky Strike 1942", zh: "Sky Strike 1942 垂直捲軸射擊" },
     tagline: {
       en: "Vertical-scrolling shoot 'em up across 7 stages, where every sprite, background and sound is generated in code \u2014 no external asset files at all.",
