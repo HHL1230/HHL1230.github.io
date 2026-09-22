@@ -510,7 +510,12 @@ const PROJECTS = [
     },
     stack: ["HTML5 Canvas", "CSS3", "JavaScript"],
     status: "public",
-    repo: "https://github.com/HHL1230/cute-snake-game"
+    repo: "https://github.com/HHL1230/cute-snake-game",
+    metrics: null,
+    shots: [
+      { src: "snake-menu.png", caption: { en: "Start screen with speed selection", zh: "開始畫面與速度選擇" } },
+      { src: "snake-play.png", caption: { en: "Mid-game \u2014 randomised theme and animal avatar", zh: "遊戲進行中，隨機主題與動物頭像" } }
+    ]
   },
   {
     id: "game-star-sprout-advanture",
@@ -534,7 +539,12 @@ const PROJECTS = [
     },
     stack: ["JavaScript", "WebGL / 3D", "HTML5"],
     status: "public",
-    repo: "https://github.com/HHL1230/game-star-sprout-advanture"
+    repo: "https://github.com/HHL1230/game-star-sprout-advanture",
+    metrics: null,
+    shots: [
+      { src: "sprout-welcome.png", caption: { en: "Welcome screen and control guide", zh: "歡迎畫面與操作說明" } },
+      { src: "sprout-play.png", caption: { en: "The garden world \u2014 stars, guardians and rescue target", zh: "花園世界：星星、守衛與待救援的小星" } }
+    ]
   },
   {
     id: "moto-duel",
@@ -569,7 +579,11 @@ const PROJECTS = [
       en: "4.5 ms per frame single-view, 6.6 ms split-screen \u2014 against a 16.6 ms budget at 60 FPS",
       zh: "單人視角每幀 4.5 ms、雙人分割 6.6 ms，對比 60 FPS 的 16.6 ms 預算"
     },
-    shots: []
+    shots: [
+      { src: "moto-solo.png", caption: { en: "Solo race \u2014 nitro boost mid-jump", zh: "單人模式：跳躍中開啟氮氣加速" } },
+      { src: "moto-split.png", caption: { en: "Split-screen two-player, each view colour-graded", zh: "雙人同機分割畫面，上下畫面採不同色調" } },
+      { src: "moto-achievements.png", caption: { en: "15-achievement progression screen", zh: "15 項成就一覽" } }
+    ]
   },
   {
     id: "sky-strike-1942",
