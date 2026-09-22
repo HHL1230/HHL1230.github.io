@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shawn Lee — Portfolio | 李浩翔 作品集</title>
+<meta name="description" content="Laboratory automation and applied AI portfolio — instrument data capture, report automation, data-integrity auditing, and apps.">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar">
+      <span class="brand" data-i18n="brandName"></span>
+      <button id="langToggle" class="lang-toggle" type="button" aria-label="Switch language">中文</button>
+    </div>
+    <h1 data-i18n="name"></h1>
+    <p class="role" data-i18n="role"></p>
+    <p class="intro" data-i18n="intro"></p>
+    <nav class="hero-links">
+      <a id="linkGithub" class="btn btn-primary" href="#" target="_blank" rel="noopener">GitHub</a>
+      <a id="linkProducts" class="btn" href="#" target="_blank" rel="noopener" data-i18n="downloadsLabel"></a>
+      <a id="linkEmail" class="btn" href="#" data-i18n="contactLabel"></a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="featured-section">
+    <h2 data-i18n="featuredHeading"></h2>
+    <div id="featured" class="grid"></div>
+  </section>
+
+  <section>
+    <div class="filters" id="filters" role="tablist" aria-label="Category filter"></div>
+    <h2 data-i18n="allHeading"></h2>
+    <div id="catalogue"></div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p class="note" data-i18n="privacyNote"></p>
+    <p class="copy">&copy; <span id="year"></span> <span data-i18n="name"></span></p>
+  </div>
+</footer>
+
+<div id="lightbox" class="lightbox" hidden>
+  <button id="lbClose" class="lb-close" type="button" aria-label="Close">&times;</button>
+  <figure class="lb-figure">
+    <img src="" alt="">
+    <figcaption class="lb-caption"></figcaption>
+  </figure>
+</div>
+
+<script src="data/projects.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
