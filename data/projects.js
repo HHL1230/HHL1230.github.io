@@ -149,7 +149,7 @@ const PROJECTS = [
         "可設定游標移動方向；以單一免安裝執行檔發佈"
       ]
     },
-    stack: ["Python", "pySerial", "Excel COM", "PyInstaller"],
+    stack: ["C#", ".NET 8", "System.IO.Ports", "Excel COM", "Win32 API"],
     status: "public",
     repo: "https://github.com/HHL1230/scale-monitor",
     demo: "https://hhl1230.github.io/my-products/scale-monitor/",
