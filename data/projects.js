@@ -246,6 +246,34 @@ const PROJECTS = [
     repo: null
   },
   {
+    id: "tfda-sample-list",
+    cat: "lab",
+    title: { en: "TFDA Sample List Automation", zh: "TFDA 測試件清單自動化" },
+    tagline: {
+      en: "Drives the LIMS weighing program end to end, then cleans, consolidates and distributes the exported test-item list with no manual Excel work in between.",
+      zh: "從控制 LIMS 秤重程式到清洗、合併、分發測項清單，全程一鍵完成，中間不需人工操作 Excel。"
+    },
+    highlights: {
+      en: [
+        "Win32 window automation drives the LIMS desktop program and detects export completion by polling until the result count stabilizes",
+        "Tracks Excel process IDs to isolate the newly spawned export window even when other workbooks are already open",
+        "Merges rows sharing a Report ID via a dictionary keyed lookup, skipping formula-driven blank cells that a plain UsedRange scan would miscount",
+        "Distributes the consolidated list to per-project tracking sheets with duplicate-ID guards, so re-running never double-writes"
+      ],
+      zh: [
+        "以 Win32 視窗自動化控制 LIMS 秤重程式，透過持續輪詢筆數判斷匯出是否完成",
+        "記錄既有 Excel 進程 PID，即便使用者已開啟其他活頁簿也能精準鎖定新匯出的視窗",
+        "以字典依 Report ID 合併重複列，避開公式產生的視覺空白造成的誤判",
+        "將合併後清單依報單前綴分發至對應追蹤表，並以既有 ID 字典防止重複寫入"
+      ]
+    },
+    stack: ["VBA", "PowerShell", "Excel COM", "Win32 API"],
+    status: "confidential",
+    repo: null,
+    metrics: null,
+    shots: []
+  },
+  {
     id: "fcm-tfda-items-screening-tool",
     cat: "lab",
     title: { en: "Regulatory Test-Item Screening Tool", zh: "TFDA 測項篩選工具" },
