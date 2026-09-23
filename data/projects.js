@@ -1,7 +1,7 @@
 /* Project catalogue. Edit this file to update the portal. */
 
 const SITE = {
-  name: { en: "Hao-Hsiang (Shawn) Lee", zh: "李浩祥 Shawn Lee" },
+  name: { en: "Hao-Hsiang Lee", zh: "李浩祥" },
   role: {
     en: "Laboratory Automation & Applied AI",
     zh: "實驗室自動化與應用 AI"
