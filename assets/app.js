@@ -13,7 +13,7 @@
         "Source withheld under employer confidentiality \u2014 architecture walkthrough available on request.",
       closeLabel: "Close",
       privacyNote:
-        "Projects marked \u201CConfidential\u201D were built in a commercial laboratory environment and remain the property of my employer. Source code is not published. The descriptions and screenshots on this page contain no client data, personnel data or proprietary test methods. I am happy to discuss the architecture and engineering decisions in an interview.",
+        "Projects marked \u201CConfidential\u201D withhold source for one of two reasons: most were built in a commercial laboratory environment and remain the property of my employer; a few are personal practice projects with a licensing question still open. Either way, source code is not published, and the descriptions and screenshots on this page contain no client data, personnel data or proprietary test methods. I am happy to discuss the architecture and engineering decisions in an interview.",
       toggle: "\u4E2D\u6587",
       all: "All"
     },
@@ -28,7 +28,7 @@
         "\u539F\u59CB\u78BC\u53D7\u96C7\u4E3B\u4FDD\u5BC6\u898F\u7BC4\u9650\u5236\u4E0D\u516C\u958B\uFF0C\u6B61\u8FCE\u65BC\u9762\u8A66\u4E2D\u8AAA\u660E\u67B6\u69CB\u8A2D\u8A08\u3002",
       closeLabel: "\u95DC\u9589",
       privacyNote:
-        "\u6A19\u793A\u300C\u5546\u696D\u6A5F\u5BC6\u300D\u7684\u5C08\u6848\u958B\u767C\u65BC\u5546\u696D\u5BE6\u9A57\u5BA4\u74B0\u5883\uFF0C\u8457\u4F5C\u6B0A\u5C6C\u65BC\u96C7\u4E3B\uFF0C\u56E0\u6B64\u4E0D\u516C\u958B\u539F\u59CB\u78BC\u3002\u672C\u9801\u7684\u63CF\u8FF0\u8207\u622A\u5716\u4E0D\u542B\u4EFB\u4F55\u5BA2\u6236\u8CC7\u6599\u3001\u4EBA\u54E1\u8CC7\u6599\u6216\u5C08\u6709\u6E2C\u8A66\u65B9\u6CD5\u3002\u6B61\u8FCE\u65BC\u9762\u8A66\u4E2D\u8A0E\u8AD6\u67B6\u69CB\u8207\u5DE5\u7A0B\u6C7A\u7B56\u3002",
+        "\u6A19\u793A\u300C\u5546\u696D\u6A5F\u5BC6\u300D\u7684\u5C08\u6848\u6709\u5169\u7A2E\u60C5\u6CC1\uFF1A\u591A\u6578\u662F\u5728\u5546\u696D\u5BE6\u9A57\u5BA4\u74B0\u5883\u958B\u767C\uFF0C\u8457\u4F5C\u6B0A\u5C6C\u65BC\u96C7\u4E3B\uFF1B\u5C11\u6578\u5247\u662F\u5C1A\u672A\u78BA\u8A8D\u6388\u6B0A\u7BC4\u570D\u7684\u500B\u4EBA\u7DF4\u7FD2\u4F5C\u54C1\u3002\u5169\u8005\u7686\u4E0D\u516C\u958B\u539F\u59CB\u78BC\u3002\u672C\u9801\u7684\u63CF\u8FF0\u8207\u622A\u5716\u4E0D\u542B\u4EFB\u4F55\u5BA2\u6236\u8CC7\u6599\u3001\u4EBA\u54E1\u8CC7\u6599\u6216\u5C08\u6709\u6E2C\u8A66\u65B9\u6CD5\u3002\u6B61\u8FCE\u65BC\u9762\u8A66\u4E2D\u8A0E\u8AD6\u67B6\u69CB\u8207\u5DE5\u7A0B\u6C7A\u7B56\u3002",
       toggle: "EN",
       all: "\u5168\u90E8"
     }
@@ -105,7 +105,7 @@
       links.appendChild(d);
     }
     if (!isPublic) {
-      links.appendChild(el("span", "locked", t("confidentialNote")));
+      links.appendChild(el("span", "locked", p.noteOverride ? L(p.noteOverride) : t("confidentialNote")));
     }
     card.appendChild(links);
 

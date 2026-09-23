@@ -41,6 +41,11 @@ const CATEGORIES = [
  * shots    (OPTIONAL)
  *   Array of { src, caption: { en, zh } }. Files live in assets/shots/.
  *   Blur or replace any real sample IDs, client names and file paths first.
+ *
+ * noteOverride  (OPTIONAL, confidential projects only)
+ *   { en, zh } text shown instead of the default "employer confidentiality"
+ *   note. Use for confidential projects that are NOT employer work (e.g. a
+ *   personal practice project with an unresolved licensing question).
  */
 const PROJECTS = [
   {
@@ -429,7 +434,11 @@ const PROJECTS = [
     status: "confidential",
     repo: null,
     metrics: null,
-    shots: []
+    shots: [],
+    noteOverride: {
+      en: "Practice project from a paid AI-assisted development course, built from my own prompt/spec \u2014 not employer work. Source withheld pending a licensing check on commercial use.",
+      zh: "\u4ED8\u8CBB AI \u8F14\u52A9\u958B\u767C\u8AB2\u7A0B\u4E2D\uFF0C\u4F9D\u81EA\u8EAB\u9700\u6C42\u64B0\u5BEB prompt \u5B8C\u6210\u7684\u7DF4\u7FD2\u4F5C\u54C1\uFF0C\u4E26\u975E\u96C7\u4E3B\u5DE5\u4F5C\u3002\u5546\u696D\u4F7F\u7528\u6388\u6B0A\u5C1A\u5F85\u78BA\u8A8D\uFF0C\u6545\u66AB\u4E0D\u516C\u958B\u539F\u59CB\u78BC\u3002"
+    }
   },
   {
     id: "cli-dev-sync-tool",
