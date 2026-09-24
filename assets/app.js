@@ -34,9 +34,9 @@
     }
   };
 
-  /* Default to Traditional Chinese; remember the visitor's explicit choice. */
+  /* Default to English; remember the visitor's explicit choice. */
   var saved = localStorage.getItem("portfolioLang");
-  var lang = (saved === "en" || saved === "zh") ? saved : "zh";
+  var lang = (saved === "en" || saved === "zh") ? saved : "en";
   var activeCat = "all";
 
   function t(key) { return UI[lang][key]; }
@@ -197,6 +197,7 @@
     document.querySelectorAll(".lang-opt").forEach(function (b) {
       b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
     });
+    document.documentElement.lang = lang === "zh" ? "zh-Hant" : "en";
     document.getElementById("lbClose").setAttribute("aria-label", t("closeLabel"));
     document.getElementById("linkGithub").href = SITE.links.github;
     document.getElementById("linkProducts").href = SITE.links.products;
